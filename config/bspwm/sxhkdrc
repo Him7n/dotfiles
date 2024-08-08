@@ -28,8 +28,8 @@ shift + alt + {b,g,n}
 	OpenApps {--browser,--editor,--filemanager}
 
 # Terminal apps (ranger, nvim, ncmpcpp)
-shift + alt + {r,v,k}
-	OpenApps {--ranger,--nvim,--music}
+shift + alt + {r,v,k,s}
+	OpenApps {--ranger,--nvim,--music,--spotify}
 
 
 #|||----- System Keybindings -----|||#
@@ -48,7 +48,7 @@ alt + @space
 
 # Scratchpad
 super + alt + o
-	tdrop -a -w 70% -h 35% -y 0 -x 15%  --class scratch alacritty --class=scratch
+	tdrop -a -w 70% -h 20% -y 0 -x 15%  --class scratch alacritty --class=scratch
 
 # Power off, Reboot, Log out, Lockscreen, kill an app
 ctrl + super + alt + {p,r,q,l,k}
@@ -64,7 +64,7 @@ ctrl + alt + {plus,minus,t}
 
 # Random wallpaper
 super + alt + w
-	WallSelect
+	feh -z --bg-fill ~/Downloads/*
 
 # Screenshot Now
 Print
@@ -145,6 +145,8 @@ super + {_,shift + }{Left,Down,Up,Right}
 super + ctrl + {Left,Right}
 	bspc desktop -f {prev,next}.local
 
+super + ctrl + {h,l}
+bspc desktop -f {prev,next}.local
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last
@@ -160,8 +162,8 @@ super + ctrl + shift + {Left,Right}
 #####
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+#super + ctrl + {h,j,k,l}
+	#bspc node -p {west,south,north,east}
 
 # cancel the preselection for the focused node
 super + ctrl + space
@@ -184,3 +186,8 @@ super + alt + shift + {Left,Down,Up,Right}
 # move a floating window
 alt + shift {Left,Down,Up,Right}
 	bspc node -v {-10 0,0 10,0 -10,10 0}
+
+# waku waku alt tab
+alt + tab
+bspc node -f last
+ 
