@@ -1,0 +1,16 @@
+[SddmGreeterTheme]
+Name=C64-GEOS
+Description=C64 GEOS
+Author=Pentad
+Copyright=
+License=CC-BY-SA
+Type=sddm-theme
+Version=1.0
+Website=https://store.kde.org/u/pentad
+Screenshot=preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=markhart@outlook.com
+Theme-Id=C64-GEOS
+Theme-API=2.0
