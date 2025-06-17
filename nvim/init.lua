@@ -10,6 +10,7 @@ if not vim.uv.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
+vim.wo.relativenumber = true;
 
 local lazy_config = require "configs.lazy"
 
@@ -25,6 +26,7 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+vim.opt.statusline=""
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
