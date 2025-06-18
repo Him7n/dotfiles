@@ -1,0 +1,64 @@
+
+set number relativenumber
+set idearefactormode=keep
+set ideajoin
+set surround
+set easymotion
+
+let mapleader = " "
+
+inoremap jj <Esc>
+" nmap <S-Enter> O<Esc>
+"  nmap <CR> o<Esc>
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
+" system clipboard
+" set clipboard unnamedplus
+" changed from "+ to "* in version 2.5.0
+vmap <leader>y "*y
+vmap <leader>d "*d
+nmap <leader>y "*yy
+nmap <leader>p "*p
+nmap <leader>P "*P
+vmap <leader>p "*p
+vmap <leader>P "*P
+
+" scrolling
+nmap <leader>d <C-d>
+nmap <leader>u <C-u>
+vmap <leader>d <C-d>
+vmap <leader>u <C-u>
+
+" actions
+nmap <leader>h <action>(PreviousTab)
+nmap <leader>l <action>(NextTab)
+nmap <leader>bd <action>(CloseEditor)
+nmap <leader>i <action>(Generate)
+nmap <leader>m <action>(Git.Menu)
+" nmap <leader>s <action>(QuickChangeScheme)
+" nmap <leader>/ <action>(ShowErrorDescription)
+" nmap <leader>e <action>(GotoNextError)
+" nnoremap <leader><leader> <C-Tab>
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+nmap <leader>e :NERDTreeToggle<CR>
+" File Tree
+map <leader>fe :action GotoClass<cr>
+map <leader>fn :action GotoFile<cr>
+map <leader>fp :action ManageRecentProjects<cr>
+map <leader>fa :action GotoAction<cr>
+map <leader>fg :action FindInPath<cr>
+map <leader>fh :action RecentFiles<cr>
+map <leader>fm :action RecentLocations<cr>
+map <leader>fs :action GotoSymbol<cr>
+map <leader>fd :action Find<cr>
+map <leader>fr :action Replace<cr>
+map <leader>fR :action ReplaceInPath<cr>
+map <leader>fx :action PasteMultiple<cr>
+map <leader>ft :action ActivateTODOToolWindow<cr>
+
+nmap <leader>nf :action NewFile<CR>
