@@ -1,0 +1,6 @@
+[core]
+	editor = nvim
+	filemode = false
+[user]
+	email = himanshu.sharma@harness.io
+	name = Himanshu Sharma

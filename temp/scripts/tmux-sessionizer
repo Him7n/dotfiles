@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+# Save this file as ~/scripts/tmux-sessionizer
+# Make it executable with: chmod +x ~/.local/bin/tmux-sessionizer
+
+switch_to() {
+    if [[ -z $TMUX ]]; then
+        # If we're outside tmux, attach to the session
+        tmux attach-session -t "$1"
+    else
+        # If we're inside tmux, switch to the session
+        tmux switch-client -t "$1"
+    fi
+}
+
+has_session() {
+    # Check if a session with the given name exists
+    tmux list-sessions | grep -q "^$1:"
+}
+
+hydrate() {
+    # If a .tmux-sessionizer file exists in the project or home directory, source it
+    if [ -f "$2/.tmux-sessionizer" ]; then
+        tmux send-keys -t "$1" "source \"$2/.tmux-sessionizer\"" C-m
+    elif [ -f "$HOME/.tmux-sessionizer" ]; then
+        tmux send-keys -t "$1" "source \"$HOME/.tmux-sessionizer\"" C-m
+    fi
+}
+
+# Use CLI arg if provided, otherwise use fzf to select from your custom paths
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=$(fd -H . ~/gitops/ ~/gitops-agent ~/gitops-dev-env/ -t d -d 1 | fzf)
+fi
+
+# Abort if fzf was cancelled or nothing was selected
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+# Normalize the directory path into a valid tmux session name
+selected_name=$(basename "$selected" | tr . _)
+
+# Create the session if it doesn't already exist.
+# This single block handles all creation cases.
+if ! has_session "$selected_name"; then
+    # The -d flag creates the session detached and will start the
+    # tmux server automatically if it's not already running.
+    # The -c flag sets the session's starting directory.
+    tmux new-session -ds "$selected_name" -c "$selected"
+    hydrate "$selected_name" "$selected"
+fi
+
+# Switch to (if inside tmux) or attach to (if outside tmux) the session.
+switch_to "$selected_name"

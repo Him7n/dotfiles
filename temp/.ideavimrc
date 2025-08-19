@@ -1,0 +1,103 @@
+
+" -------------------------
+" Appearance & Basics
+" -------------------------
+set number
+set relativenumber
+set idearefactormode=keep
+set ideajoin
+set surround
+set easymotion
+let mapleader = " "
+
+" -------------------------
+" Insert Mode Escape
+" -------------------------
+inoremap jj <Esc>
+
+" -------------------------
+" Arrow keys in insert mode
+" -------------------------
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
+" -------------------------
+" Clipboard
+" -------------------------
+vmap <leader>y "*y
+vmap <leader>d "*d
+nmap <leader>y "*yy
+nmap <leader>p "*p
+nmap <leader>P "*P
+vmap <leader>p "*p
+vmap <leader>P "*P
+
+" -------------------------
+" Scrolling
+" -------------------------
+nmap <leader>d <C-d>
+nmap <leader>u <C-u>
+vmap <leader>d <C-d>
+vmap <leader>u <C-u>
+
+" -------------------------
+" Tab Navigation
+" -------------------------
+nmap <leader>h <action>(PreviousTab)
+nmap <leader>l <action>(NextTab)
+nmap <C-o> <action>(NextTab)
+nmap <C-i> <action>(PreviousTab)
+
+" -------------------------
+" Git and Editor Actions
+" -------------------------
+nmap <leader>bd <action>(CloseEditor)
+nmap <leader>i <action>(Generate)
+nmap <leader>m <action>(Git.Menu)
+
+" -------------------------
+" NERDTree / File Explorer
+" -------------------------
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+nmap <leader>e :NERDTreeToggle<CR>
+
+" -------------------------
+" File Navigation
+" -------------------------
+map <leader>fe :action GotoClass<cr>
+map <leader>ff :action GotoFile<cr>
+map <leader>fp :action ManageRecentProjects<cr>
+map <leader>fa :action GotoAction<cr>
+map <leader>fz :action FindInPath<cr>
+map <leader>fh :action RecentFiles<cr>
+map <leader>fm :action RecentLocations<cr>
+map <leader>fs :action GotoSymbol<cr>
+map <leader>fd :action Find<cr>
+map <leader>fr :action Replace<cr>
+map <leader>fR :action ReplaceInPath<cr>
+map <leader>fx :action PasteMultiple<cr>
+"map <leader>ft :action ActivateTODOToolWindow<cr>
+nmap <leader>tt :action ActivateTerminalToolWindow<CR>
+nmap <leader>th :action HideAllWindows<CR>
+" -------------------------
+" Create New File
+" -------------------------
+nmap <leader>nf :action NewFile<CR>
+
+" -------------------------
+" Real Vim-style Splits!
+" -------------------------
+" Create splits manually
+nmap <leader>sv :vsplit<CR>
+nmap <leader>sh :split<CR>
+
+" Move between splits using Ctrl+h/j/k/l
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+map <C-l> <C-w>l

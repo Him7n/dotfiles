@@ -1,0 +1,681 @@
+{
+  "_id": {
+    "$oid": "6891dae048d15406e9abb33d"
+  },
+  "accountIdentifier": "0UG6mpX9S3ajRIJ6Ldg-IQ",
+  "agentIdentifier": "account.mirkoaccounthagitopsautomation",
+  "name": "app",
+  "orgIdentifier": "default",
+  "projectIdentifier": "mirkotest",
+  "app": {
+    "objectmeta": {
+      "name": "app",
+      "generatename": "",
+      "namespace": "mirko-account-ha-gitopsautomation",
+      "selflink": "",
+      "uid": "33422cb8-9ca1-4965-83a2-8e0ddd5fa0ed",
+      "resourceversion": "1754390603271103010",
+      "generation": {
+        "$numberLong": "16"
+      },
+      "creationtimestamp": {
+        "time": {
+          "$date": "2025-08-05T10:20:16.000Z"
+        }
+      },
+      "deletiontimestamp": null,
+      "deletiongraceperiodseconds": null,
+      "labels": null,
+      "annotations": null,
+      "ownerreferences": null,
+      "finalizers": null,
+      "managedfields": null
+    },
+    "spec": {
+      "source": {
+        "repourl": "https://github.com/mteodor/argocd-example-apps",
+        "path": "apps",
+        "targetrevision": "master",
+        "helm": null,
+        "kustomize": null,
+        "ksonnet": null,
+        "directory": null,
+        "plugin": null,
+        "chart": "",
+        "ref": "",
+        "name": ""
+      },
+      "destination": {
+        "server": "https://kubernetes.default.svc",
+        "namespace": "mirko-account-ha-gitopsautomation",
+        "name": ""
+      },
+      "project": "4be60204",
+      "syncpolicy": {
+        "automated": {
+          "prune": false,
+          "selfheal": false,
+          "allowempty": false
+        },
+        "syncoptions": [
+          "PrunePropagationPolicy=undefined",
+          "CreateNamespace=true",
+          "Validate=true",
+          "PruneLast=false",
+          "ApplyOutOfSyncOnly=false",
+          "FluxSubsystem=false",
+          "AutoCreateFluxResources=false",
+          "Replace=false",
+          "retry=false",
+          "applicationsSync=undefined",
+          "preserveResourcesOnDeletion=false"
+        ],
+        "retry": null,
+        "managednamespacemetadata": null
+      },
+      "ignoredifferences": null,
+      "info": null,
+      "revisionhistorylimit": {
+        "$numberLong": "0"
+      },
+      "sources": null
+    },
+    "status": {
+      "resources": [
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.blue-green",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.guestbook",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.helm-dependency",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.helm-guestbook",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.helm-hooks",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.jsonnet-guestbook",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.jsonnet-guestbook-tla",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.kustomize-guestbook",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.plugin-kasane",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.plugin-kustomized-helm",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.plugin-nix",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.pre-post-sync",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.sock-shop",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        },
+        {
+          "group": "argoproj.io",
+          "version": "v1alpha1",
+          "kind": "Application",
+          "namespace": "argocd",
+          "name": "example.sync-waves",
+          "status": "Synced",
+          "health": null,
+          "hook": false,
+          "requirespruning": false,
+          "syncwave": {
+            "$numberLong": "0"
+          },
+          "requiresdeletionconfirmation": false
+        }
+      ],
+      "sync": {
+        "status": "Synced",
+        "comparedto": {
+          "source": {
+            "repourl": "https://github.com/mteodor/argocd-example-apps",
+            "path": "apps",
+            "targetrevision": "master",
+            "helm": null,
+            "kustomize": null,
+            "ksonnet": null,
+            "directory": null,
+            "plugin": null,
+            "chart": "",
+            "ref": "",
+            "name": ""
+          },
+          "destination": {
+            "server": "https://kubernetes.default.svc",
+            "namespace": "mirko-account-ha-gitopsautomation",
+            "name": ""
+          },
+          "sources": null,
+          "ignoredifferences": null
+        },
+        "revision": "981f29f4900620b0762640d04aa943cd2d60fb8f",
+        "revisions": null
+      },
+      "health": {
+        "status": "Healthy",
+        "message": "",
+        "lasttransitiontime": {
+          "time": {
+            "$date": "2025-08-05T10:20:16.000Z"
+          }
+        }
+      },
+      "history": [
+        {
+          "revision": "981f29f4900620b0762640d04aa943cd2d60fb8f",
+          "deployedat": {
+            "time": {
+              "$date": "2025-08-05T10:20:19.000Z"
+            }
+          },
+          "id": {
+            "$numberLong": "0"
+          },
+          "source": null,
+          "deploystartedat": {
+            "time": {
+              "$date": "2025-08-05T10:20:17.000Z"
+            }
+          },
+          "deployedatts": {
+            "seconds": {
+              "$numberLong": "1754389219"
+            },
+            "nanos": 0,
+            "xxx_nounkeyedliteral": {},
+            "xxx_unrecognized": null,
+            "xxx_sizecache": 0
+          },
+          "deploystartedatts": {
+            "seconds": {
+              "$numberLong": "1754389217"
+            },
+            "nanos": 0,
+            "xxx_nounkeyedliteral": {},
+            "xxx_unrecognized": null,
+            "xxx_sizecache": 0
+          },
+          "sources": null,
+          "revisions": null,
+          "initiatedby": {
+            "username": "",
+            "automated": true
+          }
+        }
+      ],
+      "conditions": null,
+      "reconciledat": {
+        "time": {
+          "$date": "2025-08-05T10:43:23.000Z"
+        }
+      },
+      "operationstate": {
+        "operation": {
+          "sync": {
+            "revision": "981f29f4900620b0762640d04aa943cd2d60fb8f",
+            "prune": false,
+            "dryrun": false,
+            "syncstrategy": null,
+            "resources": null,
+            "source": null,
+            "manifests": null,
+            "syncoptions": [
+              "PrunePropagationPolicy=undefined",
+              "CreateNamespace=true",
+              "Validate=true",
+              "PruneLast=false",
+              "ApplyOutOfSyncOnly=false",
+              "FluxSubsystem=false",
+              "AutoCreateFluxResources=false",
+              "Replace=false",
+              "retry=false",
+              "applicationsSync=undefined",
+              "preserveResourcesOnDeletion=false"
+            ],
+            "sources": null,
+            "revisions": null,
+            "autohealattemptscount": {
+              "$numberLong": "0"
+            }
+          },
+          "initiatedby": {
+            "username": "",
+            "automated": true
+          },
+          "info": null,
+          "retry": {
+            "limit": {
+              "$numberLong": "5"
+            },
+            "backoff": null
+          }
+        },
+        "phase": "Succeeded",
+        "message": "successfully synced (all tasks run)",
+        "syncresult": {
+          "resources": [
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.pre-post-sync",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.pre-post-sync created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.sock-shop",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.sock-shop created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.blue-green",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.blue-green created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.helm-dependency",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.helm-dependency created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.guestbook",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.guestbook created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.sync-waves",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.sync-waves created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.helm-guestbook",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.helm-guestbook created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.jsonnet-guestbook-tla",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.jsonnet-guestbook-tla created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.jsonnet-guestbook",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.jsonnet-guestbook created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.plugin-kasane",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.plugin-kasane created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.helm-hooks",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.helm-hooks created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.kustomize-guestbook",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.kustomize-guestbook created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.plugin-nix",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.plugin-nix created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            },
+            {
+              "group": "argoproj.io",
+              "version": "v1alpha1",
+              "kind": "Application",
+              "namespace": "argocd",
+              "name": "example.plugin-kustomized-helm",
+              "status": "Synced",
+              "message": "application.argoproj.io/example.plugin-kustomized-helm created",
+              "hooktype": "",
+              "hookphase": "Running",
+              "syncphase": "Sync"
+            }
+          ],
+          "revision": "981f29f4900620b0762640d04aa943cd2d60fb8f",
+          "source": {
+            "repourl": "https://github.com/mteodor/argocd-example-apps",
+            "path": "apps",
+            "targetrevision": "master",
+            "helm": null,
+            "kustomize": null,
+            "ksonnet": null,
+            "directory": null,
+            "plugin": null,
+            "chart": "",
+            "ref": "",
+            "name": ""
+          },
+          "sources": null,
+          "revisions": null,
+          "managednamespacemetadata": null
+        },
+        "startedat": {
+          "time": {
+            "$date": "2025-08-05T10:20:17.000Z"
+          }
+        },
+        "finishedat": {
+          "time": {
+            "$date": "2025-08-05T10:20:19.000Z"
+          }
+        },
+        "retrycount": {
+          "$numberLong": "0"
+        },
+        "startedatts": {
+          "seconds": {
+            "$numberLong": "1754389217"
+          },
+          "nanos": 0,
+          "xxx_nounkeyedliteral": {},
+          "xxx_unrecognized": null,
+          "xxx_sizecache": 0
+        },
+        "finishedatts": {
+          "seconds": {
+            "$numberLong": "1754389219"
+          },
+          "nanos": 0,
+          "xxx_nounkeyedliteral": {},
+          "xxx_unrecognized": null,
+          "xxx_sizecache": 0
+        }
+      },
+      "observedat": null,
+      "sourcetype": "Helm",
+      "summary": {
+        "externalurls": null,
+        "images": null
+      },
+      "resourcehealthsource": "",
+      "sourcetypes": null,
+      "controllernamespace": "mirko-account-ha-gitopsautomation"
+    },
+    "operation": null
+  },
+  "clusterIdentifier": "account.incluster",
+  "createdAt": {
+    "seconds": {
+      "$numberLong": "1754389216"
+    },
+    "nanos": 218357833,
+    "xxx_nounkeyedliteral": {},
+    "xxx_unrecognized": null,
+    "xxx_sizecache": 0
+  },
+  "lastModifiedAt": {
+    "seconds": {
+      "$numberLong": "1754390608"
+    },
+    "nanos": 652102774,
+    "xxx_nounkeyedliteral": {},
+    "xxx_unrecognized": null,
+    "xxx_sizecache": 0
+  },
+  "ownerRef": "Agent",
+  "repoIdentifier": "",
+  "repoIdentifiers": [],
+  "skipRepoValidation": true,
+  "stale": false
+}
